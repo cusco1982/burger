@@ -1,7 +1,45 @@
-Setup the main.handlebars file so it's able to be used by Handlebars.
+{{!-- Setup the main.handlebars file so it's able to be used by Handlebars. --}}
 
 
 
 
-Create a button in index.handlebars that will submit the user input into the database.
+{{!-- Create a button in index.handlebars that will submit the user input into the database. --}}
 
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css">
+</head>
+
+
+<body>
+    {{!-- background image --}}
+    <img src="/assets/img/burger.png" id="burgerimg" alt="">
+
+    <h2>Eat-Da-Burger!</h2>
+
+
+    {{{ body }}}
+
+
+    <div class="row">
+        <div class="col lg3">
+            <form action="/burgers" method="POST">
+                <input type="text" id="name" name="burger_name" placeholder="Burger Name">
+                <button type="submit" class="addBurgerButton">Submit</button>
+            </form>
+        </div>
+    </div>
+
+
+    <h7>"Submit" a burger you would like to eat!</h7>
+
+
+</body>
+
+
+
+
+</html>

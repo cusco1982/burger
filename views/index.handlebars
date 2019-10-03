@@ -1,2 +1,62 @@
-Setup the index.handlebars to have the template that Handlebars can render onto.
+{{!-- Setup the index.handlebars to have the template that Handlebars can render onto. --}}
 
+
+<main>
+    <div class="container">
+
+        
+        <div class="row">
+        
+
+
+
+
+
+
+            <div class="col s6">                                  {{!-- makes burger button --}}
+                {{!-- all burgers in SQL --}}
+                {{#each burgers}}
+                {{!-- that are devoured=false --}}
+                    {{#unless this.devoured}}
+
+                        <div>
+
+                            <form action="/burgers/{{this.id}}?method=PUT" method="POST">
+                                <button type="submit" class="burgerList">  {{this.burger_name}}  </button>
+                            </form>
+
+                        </div>          
+
+                    {{/unless}}
+                {{/each}}
+            </div> 
+
+
+
+
+            <div class="col s3">
+
+             {{!-- checks burgers table --}}
+                {{#each burgers}}       
+                    {{#if this.devoured}}  {{!-- if burgers devoured=true --}}
+
+                        {{!-- <div class="burgerAte"> --}}
+                            <div>
+                                {{this.burger_name}}
+                            </div>
+                        {{!-- </div> --}}
+
+                    {{/if}}
+                {{/each}}
+
+            </div>
+
+
+
+
+
+        </div>
+
+
+    </div>
+</main>
