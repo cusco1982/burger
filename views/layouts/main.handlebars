@@ -1,24 +1,19 @@
-{{!-- Setup the main.handlebars file so it's able to be used by Handlebars. --}}
-
-
-
-
-{{!-- Create a button in index.handlebars that will submit the user input into the database. --}}
-
 <!DOCTYPE html>
 <html lang="en">
 
 <head>
     <meta charset="UTF-8">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css">
+    <link href="https://fonts.googleapis.com/css?family=Fjalla+One&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="/assets/css/burger_style.css">
 </head>
 
 
 <body>
     {{!-- background image --}}
-    <img src="/assets/img/burger.png" id="burgerimg" alt="">
+    <img src="/assets/img/burger.png" id="comic" alt="">
 
-    <h2>Eat-Da-Burger!</h2>
+    <h2 class="text-align: center">Eat-Da-Burger!</h2>
 
 
     {{{ body }}}
@@ -36,6 +31,11 @@
 
     <h7>"Submit" a burger you would like to eat!</h7>
 
+    <footer class="burgerFooter">
+        <div class="container">
+            <a class="black-text text-lighten-4 right" href="https://cusco1982.github.io/portfolio/" target="_blank">Portfolio</a>
+        </div>
+    </footer>
 
 </body>
 

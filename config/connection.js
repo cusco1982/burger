@@ -6,8 +6,8 @@
 var mysql = require('mysql');
 
 // heroku database
-// if (process.env.HEROKU_DB) { 
-// connection = mysql.createConnection(process.env.HEROKU_DB);
+// if (process.env.JAWSDB_URL) { 
+// connection = mysql.createConnection(process.env.JAWSDB_URL);
 // } else {
 
 // running on localhost
@@ -18,10 +18,11 @@ connection = mysql.createConnection({
     password: "PASS",
     database: 'burger_db'
 });
-
+// };
 
 connection.connect(function (err) {
     if (err) {
+        // console.error('ERROR: MySQL connection error -- ' + err.stack);
         console.log('MySQL error: ', err);
         return;
     }
